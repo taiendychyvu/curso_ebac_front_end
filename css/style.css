@@ -1,0 +1,161 @@
+*{ /*sempre usar o * para adicionar informações para todos os conteudos da tela*/
+    box-sizing: border-box;/*Sempre usar pois ele fala para o navaegdor respeitar os atributos de margin, padding e border*/
+    margin: 0;
+    padding: 0;
+}
+
+body > header { /*dessa forma to editando apenas o header que e filho direto do body porque o header ta icluso em outros elementos da pagina html*/
+    background-color: #2f3640;
+    padding: 16px 0px;
+    color: #f5f6fa;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+header .container {
+    display: flex; /*Para aparecer um ao lado do outro*/
+    align-items: center; /* para alinhar o menu e o titulo */
+    justify-content: space-between; /*usado para por o h1 de um lado e o nav de outro respeitando o width do .container de 1366px*/ 
+}
+
+header li { /*aqui estou falando para o codigo que quero apenas o li que eestá no header*/
+    display: inline; /*Display configura a forma que o elemnto sera exibido*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+header li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 1366px; /*Padrão tela de notebook*/
+    margin: 0 auto;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*Serve para distribuir o espaco de forma igualitaria entre os artigos*/
+
+}
+
+.articles article img {
+    /*height: 180px;*/ /* Quando ajustamos uma altura de uma imagem a largura é ajustada automaticamente para manter a mesma proporcao*/
+    width: 100%; /* essa largura de 100% eh 100% de 30% que esta definido na largura em .articles article*/
+}
+
+.articles article { 
+    width: 30%;/* se quero 3 noticias por linha, devo ter no maximo 33% de largura de cada, usaremos 30% para ter margem*/
+
+}
+
+/*Position fixed vai fixar uma imagem na tela e ela vai aparecer mesmo se rolar a tela*/
+
+section {
+    padding: 16px 0px;
+}
+
+section h2,
+.articles article {
+    margin-bottom: 16px;
+}
+
+.articles article he {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: #FFF;
+    padding: 8px;
+    display: inline-block; /* inline-block usado para n~ao sobrepor o conteudo da pagina, pq o a tem por padrao o display inline*/
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover {
+    text-decoration: underline;
+}
+
+.articles article p, 
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif; /* dessa forma primeiro o navegador tenta aplicar a fonte arial, depois a helvetica e se n tiver ele vai aplicar qualquer fonte sem serifa*/
+}
+
+.articles article h3 {
+    font-size: 24px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-top: 78px;
+}
+
+#esportes {
+    background-color: rgba(0,255,0, 0.1);
+}
+
+#esportes .articles article a {
+    background-color: #009432;
+}
+
+#economia {
+    background-color: #f8f59f;
+}
+
+#economia .articles article a {
+    background-color: #ff9f1a;
+
+}
+
+#tec {
+    background-color: #0940a7;
+}
+
+#tec h2{
+    color: #FFF;
+}
+
+#tec h3 {
+    color: #FFF;
+    font-weight: bold;
+}
+
+#tec p, 
+#tec time {
+    color: #FFF;
+}
+
+#tec .articles article a {
+    background-color: #009432;
+}
+
+#saude {
+    background-color: #e0acc4;
+}
+
+time {
+    font-size: 12px;
+}
+
+footer {
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+footer > p {
+    text-align: center;
+}
